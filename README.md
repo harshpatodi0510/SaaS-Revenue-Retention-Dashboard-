@@ -1,181 +1,130 @@
-SaaS Revenue & Retention Executive Dashboard
+SaaS Revenue & Retention Executive Dashboard 
+An executive-level SaaS KPI dashboard built in Power BI to analyze revenue growth quality, churn behavior, and net revenue retention trends.
+This project simulates how SaaS leadership teams monitor business health, identify risk signals, and evaluate growth sustainability using structured KPI analysis.
 
-A C-level executive SaaS KPI dashboard built in Power BI to analyze revenue growth, churn behavior, and net revenue retention trends.
+Dashboard Preview
+Executive Growth Overview
+Retention & Risk Analysis
 
-This project simulates how SaaS leadership teams monitor company health, identify risk signals, and evaluate revenue sustainability.
+Business Scenario
+A mid-sized SaaS company experiencing strong top-line growth wants to understand:
+-Is revenue growth sustainable?
+-Is churn increasing beneath the surface?
+-Are we retaining and expanding existing customers?
+-Is growth driven by healthy expansion or masked by customer losses?
 
-# Live Interactive Dashboard
-https://app.powerbi.com/reportEmbed?reportId=cacc3624-2909-4c2f-8654-31510048d20a&autoAuth=true&ctid=3664e6fa-47bd-45a6-9670-8c4f080f8ca6
+The executive team requires a centralized dashboard to:
 
-#  Business Value
+-Monitor Monthly Recurring Revenue (MRR)
+-Track customer churn trends
+-Evaluate Net Revenue Retention (NRR)
+-Compare revenue gains vs churn losses
+-Detect early risk signals
+
+This dashboard simulates a real-world C-level reporting environment.
+
+Key Insights Discovered
+1. Revenue Growth Acceleration
+-MRR shows consistent month-over-month growth.
+-MoM revenue change indicates accelerating expansion in later periods.
+-Active accounts steadily increase over time.
+
+2. Rising Churn Volatility
+-Early period shows high churn volatility.
+-Rolling 3-month churn smooths fluctuations.
+-Recent upward churn trend signals emerging retention risk.
+
+3.Revenue Loss vs Growth Gap
+-Monthly revenue lost to churn increases significantly in later months.
+-Growth still exceeds churn losses — but gap is narrowing.
+-Indicates potential margin pressure if churn accelerates.
+
+4. Net Revenue Retention (NRR)
+-NRR below 100% suggests contraction risk.
+-If NRR remains below 100% long-term, growth may rely on new acquisitions rather than expansion.
+
+Executive Recommendations
+1. Strengthen Retention Programs
+-Introduce proactive customer health scoring.
+-Target accounts contributing to churn spikes.
+-Implement early renewal engagement campaigns.
+
+2. Focus on Expansion Revenue
+-Identify upsell-ready accounts.
+-Monitor NRR monthly as a board-level KPI.
+-Create account segmentation for expansion strategy.
+
+3. Align Growth with Churn Risk Monitoring
+-Track rolling churn trend, not just monthly volatility.
+-Add risk alert thresholds (e.g., churn > 12% triggers review).
+-Integrate churn impact into revenue forecasting.
+
+KPIs Included
+-Monthly Recurring Revenue (MRR)
+-Previous Month MRR
+-MoM Δ MRR
+-MoM Growth %
+-Active Accounts
+-Average Logo Churn %
+-Total Churned Accounts
+-Total Churned MRR
+-Net Revenue Retention (NRR %)
+-Rolling 3-Month Churn %
+
+Key DAX Measures
+See full measure documentation in:
+DAX_Measures.md
+
+Includes:
+-Latest MRR
+-Previous Month MRR
+-MoM MRR Change
+-MoM Growth %
+-Rolling 3M Churn
+-Net Revenue Retention %
+-Risk Status Logic
+
+Business Value
 This dashboard helps leadership teams:
-- Identify early churn risk signals
-- Monitor Net Revenue Retention (NRR)
-- Compare revenue growth vs churn losses
-- Assess growth sustainability
-- Track MoM revenue acceleration
+-Detect early churn risk signals
+-Monitor growth sustainability
+-Compare revenue expansion vs contraction
+-Evaluate quality of revenue growth
+-Support board-level strategic decisions
 
-# Executive Summary
-This dashboard evaluates SaaS growth quality by analyzing:
-- Monthly Recurring Revenue (MRR)
-- Month-over-Month (MoM) Growth
-- Logo Churn %
-- Revenue Churn ($)
-- Active Accounts
-- Net Revenue Retention (NRR)
-- Churn Risk Classification
+Designed for executive storytelling and decision support.
 
-# Key Findings
-• Early churn volatility stabilized mid-2023  
-• Recent upward churn drift indicates rising retention risk  
-• Revenue lost to churn accelerating in latest months  
-• Net Revenue Retention below 100% indicates contraction pressure  
+Tools & Skills Demonstrated
+-Power BI (Web)
+-DAX (Time Intelligence)
+-KPI Design & Metric Engineering
+-Revenue & Retention Analytics
+-Business Storytelling
+-Executive Dashboard Layout Design
+-Risk Indicator Modeling
 
-This dashboard demonstrates how growth and retention metrics must be evaluated together to understand long-term SaaS sustainability.
+Dataset Source
+Synthetic SaaS dataset inspired by publicly available Kaggle datasets.
+Used strictly for educational and portfolio purposes.
 
-# Dataset
-Dataset: "SaaS Revenue & Retention Dataset" – Kaggle, Synthetic SaaS dataset inspired by publicly available Kaggle datasets.
-Used for educational and portfolio purposes only.
-The dataset simulates monthly SaaS company performance.
-Primary fields:
-- month_start
-- total_mrr
-- churned_mrr
-- churned_accounts
-- active_accounts
-- monthly_logo_churn_pct
+Dataset file included:
+monthly_company_kpis.csv
 
-Data Source: Simulated SaaS KPI dataset (Excel)
+How to Use
+1. Open screenshots to review dashboard layout.
+2. Review DAX logic in DAX_Measures.md.
+3. Explore dataset to replicate model.
+4. Rebuild dashboard in Power BI Desktop or Web.
 
-# Dashboard Structure
+Author
+Harsh Patodi
+Business Analytics | Revenue Strategy | Fraud & Risk Analytics
 
-# Page 1 — Executive Growth Overview
+If you found this project interesting, feel free to connect or explore my other analytics work.
 
-- Total MRR Over Time
-- Active Accounts Trend
-- Latest MRR
-- Previous Month MRR
-- MoM Revenue Change
-- MoM Growth %
-- Total Active Accounts
-- Avg MoM Growth %
-
-# Page 2 — Retention & Risk Analysis
-
-- Customer Logo Churn Trend
-- Rolling 3M Churn %
-- Monthly Revenue Lost to Churn
-- Growth vs Revenue Loss (MoM)
-- Net Revenue Retention (NRR %)
-- Total Churned Accounts
-- Total Churned MRR
-- Churn Risk Status Indicator
-
-# KPI Definitions
-
-# MRR (Monthly Recurring Revenue)
-Total subscription revenue for the month.
-
-# Logo Churn %
-Percentage of customers lost during the month.
-
-# Revenue Churn
-Total recurring revenue lost from churned customers.
-
-# Net Revenue Retention (NRR)
-NRR = (Starting MRR - Churned MRR + Expansion MRR) / Starting MRR
-NRR > 100% = Expansion  
-NRR < 100% = Contraction  
-
-# Rolling 3M Churn %
-3-month moving average to smooth volatility.
-
-# DAX Measures
-Below are key measures used in this project.
-
-## Latest MRR 
-Latest MRR =
-CALCULATE(
-SUM(monthly_company_kpis[total_mrr]),
-LASTDATE(monthly_company_kpis[month_start])
-)
-
-## Previous Month MRR
-Previous Month MRR =
-CALCULATE(
-SUM(monthly_company_kpis[total_mrr]),
-DATEADD(monthly_company_kpis[month_start], -1, MONTH)
-)
-
-## MoM MRR Change
-MoM MRR Delta =
-MoM MRR Delta =
-[Latest MRR] - [Previous Month MRR]
-
-## MoM Growth %
-MoM Growth % =
-DIVIDE(
-[MoM MRR Delta],
-[Previous Month MRR]
-)
-
-## Rolling 3 Month Churn %
-Rolling 3M Churn % =
-AVERAGEX(
-DATESINPERIOD(
-monthly_company_kpis[month_start],
-MAX(monthly_company_kpis[month_start]),
--3,
-MONTH
-),
-CALCULATE(AVERAGE(monthly_company_kpis[monthly_logo_churn_pct]))
-)
-
-## Net Revenue Retention %
-NRR % =
-VAR CurrentMRR = SUM(monthly_company_kpis[total_mrr])
-VAR ChurnMRR = SUM(monthly_company_kpis[churned_mrr])
-RETURN
-DIVIDE(CurrentMRR - ChurnMRR, CurrentMRR) * 100
-
-## Churn Risk Status
-Churn Risk Status =
-IF(
-[Rolling 3M Churn %] > 10,
-“⚠ Rising Risk”,
-“Stable”
-)
-
-# Design Decisions
-- Clean consultant-style layout
-- Minimal color palette
-- Conditional formatting for risk signaling
-- Constant benchmark line for NRR = 100%
-- KPI cards aligned for executive readability
-- White space optimized for clarity
-
-# Business Value Demonstrated
-This project demonstrates:
-- SaaS metric literacy
-- Executive-level KPI storytelling
-- Growth vs retention trade-off analysis
-- Risk signal detection
-- Advanced DAX modeling
-- Dashboard UX design principles
-
-# Dashboard Preview
-
-![Executive View](Executive_page.png)
-![Retention Dashboard](Retention_page.png)
-
-# Tools Used
-- Power BI (Web)
-- DAX
-- Data Modeling
-- KPI Design Strategy
-- - Executive Storytelling
-
-# Author
-Harsh Patodi  
-MS Business Analytics  
-Fraud & Risk Analytics | SaaS KPI Modeling | Data Strategy  
+-Final Thoughts
+-This project demonstrates the ability to:
+-Translate raw SaaS metrics into executive insights
+-Build structured KPI frameworks
+-Identify revenue sustainability risks
+-Communicate analytics for strategic leadership
