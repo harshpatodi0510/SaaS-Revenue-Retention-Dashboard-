@@ -4,6 +4,9 @@ A C-level executive SaaS KPI dashboard built in Power BI to analyze revenue grow
 
 This project simulates how SaaS leadership teams monitor company health, identify risk signals, and evaluate revenue sustainability.
 
+# Live Interactive Dashboard
+https://app.powerbi.com/reportEmbed?reportId=cacc3624-2909-4c2f-8654-31510048d20a&autoAuth=true&ctid=3664e6fa-47bd-45a6-9670-8c4f080f8ca6
+
 # Executive Summary
 This dashboard evaluates SaaS growth quality by analyzing:
 - Monthly Recurring Revenue (MRR)
@@ -23,6 +26,7 @@ This dashboard evaluates SaaS growth quality by analyzing:
 This dashboard demonstrates how growth and retention metrics must be evaluated together to understand long-term SaaS sustainability.
 
 # Dataset
+Dataset: "SaaS Revenue & Retention Dataset" – Kaggle
 The dataset simulates monthly SaaS company performance.
 Primary fields:
 - month_start
