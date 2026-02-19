@@ -7,6 +7,14 @@ This project simulates how SaaS leadership teams monitor company health, identif
 # Live Interactive Dashboard
 https://app.powerbi.com/reportEmbed?reportId=cacc3624-2909-4c2f-8654-31510048d20a&autoAuth=true&ctid=3664e6fa-47bd-45a6-9670-8c4f080f8ca6
 
+#  Business Value
+This dashboard helps leadership teams:
+- Identify early churn risk signals
+- Monitor Net Revenue Retention (NRR)
+- Compare revenue growth vs churn losses
+- Assess growth sustainability
+- Track MoM revenue acceleration
+
 # Executive Summary
 This dashboard evaluates SaaS growth quality by analyzing:
 - Monthly Recurring Revenue (MRR)
@@ -26,7 +34,8 @@ This dashboard evaluates SaaS growth quality by analyzing:
 This dashboard demonstrates how growth and retention metrics must be evaluated together to understand long-term SaaS sustainability.
 
 # Dataset
-Dataset: "SaaS Revenue & Retention Dataset" – Kaggle
+Dataset: "SaaS Revenue & Retention Dataset" – Kaggle, Synthetic SaaS dataset inspired by publicly available Kaggle datasets.
+Used for educational and portfolio purposes only.
 The dataset simulates monthly SaaS company performance.
 Primary fields:
 - month_start
@@ -145,12 +154,6 @@ IF(
 - KPI cards aligned for executive readability
 - White space optimized for clarity
 
-# Tools Used
-- Power BI (Web)
-- DAX
-- Excel (Data preparation)
-- GitHub (Version control & documentation)
-
 # Business Value Demonstrated
 This project demonstrates:
 - SaaS metric literacy
@@ -163,16 +166,14 @@ This project demonstrates:
 # Dashboard Preview
 
 ![Executive View](Executive_page.png)
+![Retention Dashboard](Retention_page.png)
 
-# Repository Structure
-SaaS-Revenue-Retention-Dashboard/
-│
-├── Executive_page.png
-├── SaaS_Dataset.xlsx
-├── DAX_Measures.md
-├── README.md
-└── LICENSE
----
+# Tools Used
+- Power BI (Web)
+- DAX
+- Data Modeling
+- KPI Design Strategy
+- - Executive Storytelling
 
 # Author
 Harsh Patodi  
